@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+--
+-- Host: localhost    Database: rbi
+-- ------------------------------------------------------
+-- Server version	5.7.17-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tbl_lining_factor_organic`
+--
+
+DROP TABLE IF EXISTS `tbl_lining_factor_organic`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_lining_factor_organic` (
+  `YearInService` int(11) NOT NULL,
+  `MoreThan6Years` double DEFAULT NULL,
+  `WithinLast6Years` double DEFAULT NULL,
+  `WithinLast3Years` double DEFAULT NULL,
+  PRIMARY KEY (`YearInService`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_lining_factor_organic`
+--
+
+LOCK TABLES `tbl_lining_factor_organic` WRITE;
+/*!40000 ALTER TABLE `tbl_lining_factor_organic` DISABLE KEYS */;
+INSERT INTO `tbl_lining_factor_organic` VALUES (1,30,1,0),(2,89,4,0),(3,230,16,0),(4,518,53,0),(5,1017,146,0.2),(6,1758,351,1),(7,2697,738,4),(8,3000,1358,16),(9,3000,2209,53),(10,3000,3000,146),(11,3000,3000,351),(12,3000,3000,738),(13,3000,3000,1358),(14,3000,3000,2209),(15,3000,3000,3000),(16,3000,3000,3000),(17,3000,3000,3000),(18,3000,3000,3000),(19,3000,3000,3000),(20,3000,3000,3000),(21,3000,3000,3000),(22,3000,3000,3000),(23,3000,3000,3000),(24,3000,3000,3000),(25,3000,3000,3000);
+/*!40000 ALTER TABLE `tbl_lining_factor_organic` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-07-11 10:44:46
