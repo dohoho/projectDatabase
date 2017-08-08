@@ -16,30 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_143_hsc_hf`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_143_hsc_hf`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_143_hsc_hf` (
+  `Field` varchar(45) NOT NULL,
+  `<200` varchar(45) DEFAULT NULL,
+  `200-237` varchar(45) DEFAULT NULL,
+  `>237` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Field`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_143_hsc_hf`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_143_hsc_hf` WRITE;
+/*!40000 ALTER TABLE `tbl_143_hsc_hf` DISABLE KEYS */;
+INSERT INTO `tbl_143_hsc_hf` VALUES ('As-Welded','Low','Medium','High'),('PWHT','Not','Low','High');
+/*!40000 ALTER TABLE `tbl_143_hsc_hf` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-07 11:17:15
+-- Dump completed on 2017-08-07 11:17:10

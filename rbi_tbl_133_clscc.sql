@@ -16,30 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_133_clscc`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_133_clscc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_133_clscc` (
+  `PH` varchar(45) NOT NULL,
+  `Temperature` varchar(45) NOT NULL,
+  `1-10` varchar(45) DEFAULT NULL,
+  `11-100` varchar(45) DEFAULT NULL,
+  `101-1000` varchar(45) DEFAULT NULL,
+  `>1000` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`PH`,`Temperature`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_133_clscc`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_133_clscc` WRITE;
+/*!40000 ALTER TABLE `tbl_133_clscc` DISABLE KEYS */;
+INSERT INTO `tbl_133_clscc` VALUES ('<=10','100-150','Low','Medium','Medium','High'),('<=10','>150-200','Medium','Medium','High','High'),('<=10','>200-300','Medium','High','High','High'),('>10','200-300','Low','Low','Low','Medium'),('>10','<200','Low','Low','Low','Low');
+/*!40000 ALTER TABLE `tbl_133_clscc` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-07 11:17:15
+-- Dump completed on 2017-08-07 11:17:12

@@ -16,30 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_65_lining_factor_organic`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_65_lining_factor_organic`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_65_lining_factor_organic` (
+  `YearInService` int(11) NOT NULL,
+  `MoreThan6Years` double DEFAULT NULL,
+  `WithinLast6Years` double DEFAULT NULL,
+  `WithinLast3Years` double DEFAULT NULL,
+  PRIMARY KEY (`YearInService`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_65_lining_factor_organic`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_65_lining_factor_organic` WRITE;
+/*!40000 ALTER TABLE `tbl_65_lining_factor_organic` DISABLE KEYS */;
+INSERT INTO `tbl_65_lining_factor_organic` VALUES (1,30,1,0),(2,89,4,0),(3,230,16,0),(4,518,53,0),(5,1017,146,0.2),(6,1758,351,1),(7,2697,738,4),(8,3000,1358,16),(9,3000,2209,53),(10,3000,3000,146),(11,3000,3000,351),(12,3000,3000,738),(13,3000,3000,1358),(14,3000,3000,2209),(15,3000,3000,3000),(16,3000,3000,3000),(17,3000,3000,3000),(18,3000,3000,3000),(19,3000,3000,3000),(20,3000,3000,3000),(21,3000,3000,3000),(22,3000,3000,3000),(23,3000,3000,3000),(24,3000,3000,3000),(25,3000,3000,3000);
+/*!40000 ALTER TABLE `tbl_65_lining_factor_organic` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-07 11:17:15
+-- Dump completed on 2017-08-07 11:17:17

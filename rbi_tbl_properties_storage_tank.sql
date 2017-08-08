@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: rbi
 -- ------------------------------------------------------
--- Server version	5.7.17-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-01 14:48:25
+-- Dump completed on 2017-08-07 11:17:11

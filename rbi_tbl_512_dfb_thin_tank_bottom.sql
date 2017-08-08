@@ -16,30 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_512_dfb_thin_tank_bottom`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_512_dfb_thin_tank_bottom`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_512_dfb_thin_tank_bottom` (
+  `art` double NOT NULL,
+  `E` int(11) DEFAULT NULL,
+  `insp` int(11) NOT NULL,
+  `D` int(11) DEFAULT NULL,
+  `C` int(11) DEFAULT NULL,
+  `B` int(11) DEFAULT NULL,
+  `A` int(11) DEFAULT NULL,
+  PRIMARY KEY (`art`,`insp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_512_dfb_thin_tank_bottom`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_512_dfb_thin_tank_bottom` WRITE;
+/*!40000 ALTER TABLE `tbl_512_dfb_thin_tank_bottom` DISABLE KEYS */;
+INSERT INTO `tbl_512_dfb_thin_tank_bottom` VALUES (0.05,4,1,1,1,1,1),(0.1,14,1,3,1,1,1),(0.15,32,1,8,2,1,1),(0.2,56,1,18,6,2,1),(0.25,87,1,32,11,4,3),(0.3,125,1,53,21,9,6),(0.35,170,1,80,36,16,12),(0.4,222,1,115,57,29,21),(0.45,281,1,158,86,47,36),(0.5,347,1,211,124,73,58),(0.55,420,1,273,173,109,89),(0.6,500,1,346,234,158,133),(0.65,587,1,430,309,222,192),(0.7,681,1,527,401,305,270),(0.75,782,1,635,510,409,370),(0.8,890,1,757,638,538,498),(0.85,1005,1,893,789,696,658),(0.9,1126,1,1044,963,888,856),(0.95,1255,1,1209,1163,1118,1098),(1,1390,1,1390,1390,1390,1390);
+/*!40000 ALTER TABLE `tbl_512_dfb_thin_tank_bottom` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-07 11:17:15
+-- Dump completed on 2017-08-07 11:17:09

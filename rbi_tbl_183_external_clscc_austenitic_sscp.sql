@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
 --
 -- Host: localhost    Database: rbi
 -- ------------------------------------------------------
@@ -16,29 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_table7.5`
+-- Table structure for table `tbl_183_external_clscc_austenitic_sscp`
 --
 
-DROP TABLE IF EXISTS `tbl_table7.5`;
+DROP TABLE IF EXISTS `tbl_183_external_clscc_austenitic_sscp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_table7.5` (
-  `TankDiameter` int(11) NOT NULL,
-  `Small` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `Large` int(11) DEFAULT NULL,
-  PRIMARY KEY (`TankDiameter`)
+CREATE TABLE `tbl_183_external_clscc_austenitic_sscp` (
+  `OpTemp` varchar(45) NOT NULL,
+  `Marine / Cooling Tower Drift Area` varchar(45) DEFAULT NULL,
+  `Temperate` varchar(45) DEFAULT NULL,
+  `Arid` varchar(45) DEFAULT NULL,
+  `Severe` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`OpTemp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_table7.5`
+-- Dumping data for table `tbl_183_external_clscc_austenitic_sscp`
 --
 
-LOCK TABLES `tbl_table7.5` WRITE;
-/*!40000 ALTER TABLE `tbl_table7.5` DISABLE KEYS */;
-INSERT INTO `tbl_table7.5` VALUES (100,1,0,0),(200,4,0,0),(300,9,0,0);
-/*!40000 ALTER TABLE `tbl_table7.5` ENABLE KEYS */;
+LOCK TABLES `tbl_183_external_clscc_austenitic_sscp` WRITE;
+/*!40000 ALTER TABLE `tbl_183_external_clscc_austenitic_sscp` DISABLE KEYS */;
+INSERT INTO `tbl_183_external_clscc_austenitic_sscp` VALUES ('120 to 200','Low','Low','None','Medium'),('200 to 300','None','None','None','None'),('<120','Medium','Low','None','High'),('>300','None','None','None','None');
+/*!40000 ALTER TABLE `tbl_183_external_clscc_austenitic_sscp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-27 18:15:13
+-- Dump completed on 2017-08-07 11:17:16

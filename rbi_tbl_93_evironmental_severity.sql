@@ -16,30 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_93_evironmental_severity`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_93_evironmental_severity`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_93_evironmental_severity` (
+  `PH` varchar(20) NOT NULL,
+  `<50` varchar(45) DEFAULT NULL,
+  `50-1000` varchar(45) DEFAULT NULL,
+  `1000-10000` varchar(45) DEFAULT NULL,
+  `>10000` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`PH`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_93_evironmental_severity`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_93_evironmental_severity` WRITE;
+/*!40000 ALTER TABLE `tbl_93_evironmental_severity` DISABLE KEYS */;
+INSERT INTO `tbl_93_evironmental_severity` VALUES ('5.5-7.5','Low','Low','Low','Moderate'),('7.6-8.3','Low','Moderate','Moderate','Moderate'),('8.4-8.9','Low','Moderate','Moderate','High'),('<5.5','Low','Moderate','High','High'),('>9.0','Low','Moderate','High','High');
+/*!40000 ALTER TABLE `tbl_93_evironmental_severity` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-07 11:17:15
+-- Dump completed on 2017-08-07 11:17:16

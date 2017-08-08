@@ -16,29 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_surface_interaction_param`
+-- Table structure for table `tbl_123_pta_cracking_sscp`
 --
 
-DROP TABLE IF EXISTS `tbl_surface_interaction_param`;
+DROP TABLE IF EXISTS `tbl_123_pta_cracking_sscp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_surface_interaction_param` (
-  `Surface` varchar(45) NOT NULL,
-  `Thermal Conductivity` double DEFAULT NULL,
-  `Thermal Diffusivity` double DEFAULT NULL,
-  `Surface Roughness` double DEFAULT NULL,
-  PRIMARY KEY (`Surface`)
+CREATE TABLE `tbl_123_pta_cracking_sscp` (
+  `Material` varchar(50) NOT NULL,
+  `Solution Annealed (<800oF)` varchar(45) DEFAULT NULL,
+  `Solution Before Weld (<800oF)` varchar(45) DEFAULT NULL,
+  `Solution After Weld (<800oF)` varchar(45) DEFAULT NULL,
+  `Solution Annealed (>=800oF)` varchar(45) DEFAULT NULL,
+  `Solution Before Weld (>=800oF)` varchar(45) DEFAULT NULL,
+  `Solution After Weld (>=800oF)` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Material`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_surface_interaction_param`
+-- Dumping data for table `tbl_123_pta_cracking_sscp`
 --
 
-LOCK TABLES `tbl_surface_interaction_param` WRITE;
-/*!40000 ALTER TABLE `tbl_surface_interaction_param` DISABLE KEYS */;
-INSERT INTO `tbl_surface_interaction_param` VALUES ('Concrete',0.53,0.00000448,1),('Soil (average)',0.56,0.00000494,3),('Soil (moist, 8% water, sandy)',0.34,0.00000362,3),('Soil (sandy, dry)',0.15,0.00000213,3);
-/*!40000 ALTER TABLE `tbl_surface_interaction_param` ENABLE KEYS */;
+LOCK TABLES `tbl_123_pta_cracking_sscp` WRITE;
+/*!40000 ALTER TABLE `tbl_123_pta_cracking_sscp` DISABLE KEYS */;
+INSERT INTO `tbl_123_pta_cracking_sscp` VALUES ('321 Stainless Steel','Medium','Medium','Low','High','High','Low'),('347 Stainless Steel','Low','Low','Low','Medium','Low','Low'),('Allow 625','Low','Low','Low','Medium','Low','Low'),('Alloy 20','Low','Low','Low','Medium','Low','Low'),('Alloy 600','Medium',NULL,NULL,'High',NULL,NULL),('Alloy 800','Medium',NULL,NULL,'High',NULL,NULL),('Austenitic weld overlay','Low','Low','Low','Medium','Low','Low'),('H Grade 300 and series SS','High',NULL,'','High',NULL,NULL),('L Grade 300 series SS','Low',NULL,NULL,'Medium',NULL,NULL),('Regular 300 series Stainless Steels','Medium',NULL,NULL,'High',NULL,NULL);
+/*!40000 ALTER TABLE `tbl_123_pta_cracking_sscp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

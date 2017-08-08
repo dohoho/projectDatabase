@@ -16,30 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_cost_parameter_environmental_sensitivity`
+-- Table structure for table `tbl_htha_damage`
 --
 
-DROP TABLE IF EXISTS `tbl_cost_parameter_environmental_sensitivity`;
+DROP TABLE IF EXISTS `tbl_htha_damage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_cost_parameter_environmental_sensitivity` (
-  `Location` int(11) NOT NULL,
-  `Description` varchar(45) DEFAULT NULL,
-  `Low` int(11) DEFAULT NULL,
-  `Medium` int(11) DEFAULT NULL,
-  `High` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Location`)
+CREATE TABLE `tbl_htha_damage` (
+  `Susceptibility` varchar(45) NOT NULL,
+  `No.Inspection` varchar(45) DEFAULT NULL,
+  `1D` varchar(45) DEFAULT NULL,
+  `1C` varchar(45) DEFAULT NULL,
+  `1B` varchar(45) DEFAULT NULL,
+  `2D` varchar(45) DEFAULT NULL,
+  `2C` varchar(45) DEFAULT NULL,
+  `2B` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Susceptibility`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_cost_parameter_environmental_sensitivity`
+-- Dumping data for table `tbl_htha_damage`
 --
 
-LOCK TABLES `tbl_cost_parameter_environmental_sensitivity` WRITE;
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` DISABLE KEYS */;
-INSERT INTO `tbl_cost_parameter_environmental_sensitivity` VALUES (1,'C_indike',10,10,10),(2,'C_ssonline',50,50,50),(3,'C_ssoffline',100,250,500),(4,'C_subsoil',500,1500,3000),(5,'C_groundwater',1000,5000,10000),(6,'C_water',500,1500,5000);
-/*!40000 ALTER TABLE `tbl_cost_parameter_environmental_sensitivity` ENABLE KEYS */;
+LOCK TABLES `tbl_htha_damage` WRITE;
+/*!40000 ALTER TABLE `tbl_htha_damage` DISABLE KEYS */;
+INSERT INTO `tbl_htha_damage` VALUES ('Damage','','2000','2000','2000','2000','2000','2000'),('High','2000','1800','1200','800','1600','800','400'),('Low','20','18','12','8','16','8','4'),('Medium','200','180','120','80','160','80','40'),('Not','1','1','1','1','1','1','1');
+/*!40000 ALTER TABLE `tbl_htha_damage` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
